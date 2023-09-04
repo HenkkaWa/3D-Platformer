@@ -6,17 +6,17 @@ public class StickyPlatform : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.GameObject.name == "Player")
+        if (collision.gameObject.name == "Player")
         {
-            collision.GameObject.transform.SetParent(transform);
+            collision.gameObject.transform.SetParent(transform);
         }
     }
 
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.GameObject.name == "Player")
+        if (collision.gameObject.name == "Player")
         {
-            collision.GameObject.transform.SetParent(null);
+            collision.gameObject.transform.SetParent(null);
         }
     }
 }
